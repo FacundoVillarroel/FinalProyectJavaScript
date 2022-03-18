@@ -1,0 +1,19 @@
+  /* HEADER */
+  
+header {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to top, $colorNegro, $colorRojo);
+  padding: 1rem;
+  .logo {
+    width: 10rem;
+    padding-right: 2rem;
+  }
+  .titulo {
+    text-transform: uppercase;
+    font-family: 'Alfa Slab One', cursive;
+  }
+}
+  

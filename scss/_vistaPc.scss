@@ -1,0 +1,121 @@
+/* VISTA PC */
+
+@media only screen and (min-width: 1024px) {
+
+  /* HEADER PC */
+
+  header{
+    .titulo {
+      font-size: 4rem;
+    }
+    .logo {
+      width: 14rem;
+
+      &:hover {
+        width: 15rem;
+      }
+    }
+  }
+
+  /* MENU NAV PC */
+
+  .menu {
+    padding: 1rem 0rem;
+    a{
+      margin-right: 2rem;
+      font-size: 2rem;
+    }
+  }
+
+  /* SECCION INDEX PC */
+
+  .gridPadreIndex {
+    grid-template-columns: 5fr 1.5fr 2fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "reciente recienteTexto posiciones" "proximoPartido proximoPartido maps";
+    grid-row-gap: 5.5rem;
+    grid-column-gap: 1rem;
+    font-size: 1.6rem;
+    justify-content: space-evenly;
+    align-content: space-between;
+    margin: 3rem 11rem;
+    .proximoPartido{
+      margin-top: 0rem;
+    }
+  }
+
+  /* SECCION FIXTURE */
+
+    .fixtureFecha{
+      max-width: 70vw;
+    }
+
+  /* SECCIÓN GOLES PC */
+
+  .gridPadreGoles {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr 1fr;
+    grid-row: repeat(2, auto);
+    grid-template-areas: "goleadores maximasGoleadas penales" "dobletes hattricks poker";
+    padding: 2rem 1rem;
+    justify-content: space-evenly;
+    column-gap: 2rem;
+    row-gap: 2rem;
+    .goleadores {
+      grid-area: goleadores;
+    }
+    .primerGol {
+      grid-area: primerGol;
+    }
+    .maximasGoleadas {
+      grid-area: maximasGoleadas;
+    }
+    .penales {
+      grid-area: penales;
+    }
+    .dobletes {
+      grid-area: dobletes;
+    }
+    .hattricks {
+      grid-area: hattricks;
+    }
+    .poker {
+      grid-area: poker;
+    }
+  }
+
+
+  /* SECCIÓN NOSOTROS PC */
+
+  .gridPadreNosotros{
+    .gridGaleria {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, auto);
+      column-gap: 1rem;
+      row-gap: 1rem;
+    }
+  }
+
+  /* SECCIÓN TIENDA PC */
+
+  .gridPadreTienda{
+    .gridGaleria {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, auto);
+      column-gap: 1rem;
+      row-gap: 1rem;
+      padding: 0rem 6.5rem;
+      .imgProducto{
+        height: 30rem;
+      }
+      .productoBoton{
+        font-size: 1.7rem;
+      }
+    }
+  }
+  
+}
+
+

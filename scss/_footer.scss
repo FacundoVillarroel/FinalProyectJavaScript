@@ -1,0 +1,46 @@
+/* CLASES PARA EL FOOTER */
+
+.contenedorFooter {
+  margin-top: 3rem;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center;
+  background-image: linear-gradient(to top, $colorRojo, $colorNegro);
+  .imgFooterCampa {
+    min-width: 7.5rem;
+    min-height: 7.5rem;
+    background-image: url(../images/campaCelu.png);
+    &:hover{
+      background-image: url(../images/campaNegroCelu.png);
+    }
+  }
+  .imgFooterKappa{
+    margin-top: 1rem;
+    width: 7.5rem;
+    height: 4.2rem;
+    background-image: url(../images/kappaCelu.png);
+    &:hover{
+      background-image: url(../images/kappaNegroCelu.png);
+    }
+  }
+  .iconos {
+    font-size: 3rem;
+    color: $colorBlanco;
+    padding-right: 1rem;
+    &:hover{
+      color: $colorNegro;
+    }
+  }
+  .patrocinadorFlex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+
+  
+  

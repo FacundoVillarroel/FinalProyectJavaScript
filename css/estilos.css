@@ -1,0 +1,1055 @@
+@charset "UTF-8";
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  width: auto;
+  background: #212121;
+  color: #ffffff;
+  font-size: 1.2rem; }
+
+.titular {
+  padding-top: 2rem;
+  font-weight: 600;
+  padding-bottom: 1rem;
+  text-align: center; }
+
+.titularSecundario {
+  padding-top: 2rem;
+  font-weight: 400;
+  padding-bottom: 1rem;
+  text-align: center; }
+
+table.fondo {
+  background-color: #2eb872;
+  border: solid #212121 0.1rem; }
+
+table th {
+  border: 0.1rem solid #212121;
+  padding: 0.5rem;
+  text-align: center; }
+
+table td {
+  border: 0.1rem solid #212121;
+  padding: 0.5rem;
+  text-align: start; }
+
+a {
+  text-decoration: none;
+  color: #ffffff; }
+
+/* clase para imágenes */
+.bordeRedondeado {
+  width: 100%;
+  border-radius: 10%; }
+
+/* HEADER */
+header {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to top, #212121, #fa4659);
+  padding: 1rem; }
+  header .logo {
+    width: 10rem;
+    padding-right: 2rem; }
+  header .titulo {
+    text-transform: uppercase;
+    font-family: 'Alfa Slab One', cursive; }
+
+/* MENU NAV */
+.menu {
+  position: sticky;
+  padding: 0.5rem 0rem;
+  top: 0;
+  display: flex;
+  background-color: #2eb872;
+  font-size: 1.6rem;
+  z-index: 10;
+  text-transform: capitalize;
+  font-weight: 600; }
+  .menu .paginaActiva {
+    color: #ffffff; }
+  .menu a {
+    color: #212121;
+    text-decoration: none;
+    padding: 0.3rem; }
+
+.navbar-nav {
+  align-items: flex-end; }
+
+/* CLASES PARA EL FOOTER */
+.contenedorFooter {
+  margin-top: 3rem;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center;
+  background-image: linear-gradient(to top, #fa4659, #212121); }
+  .contenedorFooter .imgFooterCampa {
+    min-width: 7.5rem;
+    min-height: 7.5rem;
+    background-image: url(../images/campaCelu.png); }
+    .contenedorFooter .imgFooterCampa:hover {
+      background-image: url(../images/campaNegroCelu.png); }
+  .contenedorFooter .imgFooterKappa {
+    margin-top: 1rem;
+    width: 7.5rem;
+    height: 4.2rem;
+    background-image: url(../images/kappaCelu.png); }
+    .contenedorFooter .imgFooterKappa:hover {
+      background-image: url(../images/kappaNegroCelu.png); }
+  .contenedorFooter .iconos {
+    font-size: 3rem;
+    color: #ffffff;
+    padding-right: 1rem; }
+    .contenedorFooter .iconos:hover {
+      color: #212121; }
+  .contenedorFooter .patrocinadorFlex {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+
+/* SECCIÓN INDEX */
+.gridPadreIndex {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, auto);
+  grid-template-areas: "reciente" "recienteTexto" "posiciones" "proximoPartido" "maps";
+  grid-row-gap: 3rem;
+  margin: 3rem 1rem;
+  text-align: center; }
+  .gridPadreIndex .reciente {
+    grid-area: reciente; }
+  .gridPadreIndex .recienteTexto {
+    grid-area: recienteTexto; }
+  .gridPadreIndex .posiciones {
+    grid-area: posiciones;
+    justify-self: center;
+    background-image: linear-gradient(to right #fa4659, #2eb872); }
+  .gridPadreIndex .proximoPartido {
+    grid-area: proximoPartido;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: outset 0.2rem;
+    background-image: url(../images/pastoSintetico.jpg);
+    animation-name: zoom;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-delay: 0s; }
+    .gridPadreIndex .proximoPartido a {
+      text-decoration: none;
+      color: #ffffff; }
+      .gridPadreIndex .proximoPartido a .titularSecundario:hover {
+        transition: font-size 0.5s;
+        font-size: 2.5rem; }
+    .gridPadreIndex .proximoPartido .vs {
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+  .gridPadreIndex .maps {
+    grid-area: maps;
+    align-self: center; }
+    .gridPadreIndex .maps .titularMaps {
+      padding-top: 0rem;
+      font-weight: 600;
+      padding-bottom: 2rem;
+      text-align: center; }
+
+/* SECCIÓN FIXTURE */
+.fixture {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 0.6fr;
+  grid-template-rows: repeat(11, 1fr);
+  row-gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+  .fixture .fixtureFecha {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 2fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "fecha fecha fecha fecha fecha" "gifLocal equipoLocal resultado equipoVisitante gifVisitante";
+    align-items: center;
+    column-gap: 1rem;
+    justify-content: center;
+    border: #ffffff dotted 0.1rem;
+    padding: 0.5rem;
+    margin-bottom: 2rem;
+    background-image: radial-gradient(#2eb872, #212121);
+    width: 90vw; }
+    .fixture .fixtureFecha .fecha {
+      grid-area: fecha; }
+    .fixture .fixtureFecha .gifLocal {
+      grid-area: gifLocal; }
+    .fixture .fixtureFecha .equipoLocal {
+      grid-area: equipoLocal; }
+    .fixture .fixtureFecha .resultado {
+      grid-area: resultado; }
+    .fixture .fixtureFecha .equipoVisitante {
+      grid-area: equipoVisitante; }
+    .fixture .fixtureFecha .gifVisitante {
+      grid-area: gifVisitante; }
+
+.imgEscudo {
+  max-width: 5rem; }
+
+/* SECCIÓN GOLES */
+.gridPadreGoles {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row: repeat(6, auto);
+  grid-template-areas: "goleadores" "maximasGoleadas" "penales" "dobletes" "hattricks" "poker";
+  padding: 2rem 1rem;
+  justify-content: space-evenly;
+  justify-items: center;
+  text-align: center;
+  row-gap: 2rem; }
+  .gridPadreGoles .goleadores {
+    grid-area: goleadores; }
+  .gridPadreGoles .maximasGoleadas {
+    grid-area: maximasGoleadas; }
+    .gridPadreGoles .maximasGoleadas .aFavor {
+      color: green;
+      text-shadow: 1px 1px black;
+      text-align: center; }
+    .gridPadreGoles .maximasGoleadas .enContra {
+      color: #fa4659;
+      text-shadow: 1px 1px black;
+      text-align: center; }
+  .gridPadreGoles .penales {
+    grid-area: penales; }
+  .gridPadreGoles .dobletes {
+    grid-area: dobletes; }
+  .gridPadreGoles .hattricks {
+    grid-area: hattricks; }
+  .gridPadreGoles .poker {
+    grid-area: poker; }
+
+/* SECCIÓN PARTIDOS*/
+.tituloJugadores {
+  padding-top: 2rem;
+  font-weight: 600;
+  padding-bottom: 3rem;
+  text-align: center; }
+
+.table-dark {
+  --bs-table-bg:#212121;
+  --bs-table-hover-bg: #212121; }
+  .table-dark th {
+    text-align: left; }
+  .table-dark tr {
+    vertical-align: middle;
+    border-bottom: rgba(250, 70, 89, 0.3) solid; }
+  .table-dark .celdaFlex {
+    display: flex;
+    align-items: center; }
+
+/* IMAGENES DE LOS JUGADORES */
+.jugadorImagen1 {
+  background-image: url(../images/jugador-1.jpg);
+  width: 5rem;
+  height: 5rem;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen2 {
+  background-image: url(../images/jugador-2.jpg);
+  width: 5rem;
+  height: 5rem;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen3 {
+  background-image: url(../images/jugador-3.jpg);
+  width: 5rem;
+  height: 5rem;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen4 {
+  background-image: url(../images/jugador-4.jpg);
+  width: 5rem;
+  height: 5rem;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen5 {
+  background-image: url(../images/jugador-5.jpg);
+  width: 5rem;
+  height: 5rem;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen6 {
+  background-image: url(../images/jugador-6.jpg);
+  width: 5rem;
+  height: 5rem;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen7 {
+  background-image: url(../images/jugador-7.jpg);
+  width: 5rem;
+  height: 5rem;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen8 {
+  background-image: url(../images/jugador-8.jpg);
+  width: 5rem;
+  height: 5rem;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen9 {
+  background-image: url(../images/jugador-9.jpg);
+  width: 5rem;
+  height: 5rem;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen10 {
+  background-image: url(../images/jugador-10.jpg);
+  width: 5rem;
+  height: 5rem;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen11 {
+  background-image: url(../images/jugador-11.jpg);
+  width: 5rem;
+  height: 5rem;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen12 {
+  background-image: url(../images/jugador-12.jpg);
+  width: 5rem;
+  height: 5rem;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen13 {
+  background-image: url(../images/jugador-13.jpg);
+  width: 5rem;
+  height: 5rem;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen14 {
+  background-image: url(../images/jugador-14.jpg);
+  width: 5rem;
+  height: 5rem;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen15 {
+  background-image: url(../images/jugador-15.jpg);
+  width: 5rem;
+  height: 5rem;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen16 {
+  background-image: url(../images/jugador-16.jpg);
+  width: 5rem;
+  height: 5rem;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen17 {
+  background-image: url(../images/jugador-17.jpg);
+  width: 5rem;
+  height: 5rem;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen18 {
+  background-image: url(../images/jugador-18.jpg);
+  width: 5rem;
+  height: 5rem;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen19 {
+  background-image: url(../images/jugador-19.jpg);
+  width: 5rem;
+  height: 5rem;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen20 {
+  background-image: url(../images/jugador-20.jpg);
+  width: 5rem;
+  height: 5rem;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen21 {
+  background-image: url(../images/jugador-21.jpg);
+  width: 5rem;
+  height: 5rem;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen22 {
+  background-image: url(../images/jugador-22.jpg);
+  width: 5rem;
+  height: 5rem;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen23 {
+  background-image: url(../images/jugador-23.jpg);
+  width: 5rem;
+  height: 5rem;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen24 {
+  background-image: url(../images/jugador-24.jpg);
+  width: 5rem;
+  height: 5rem;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.jugadorImagen25 {
+  background-image: url(../images/jugador-25.jpg);
+  width: 5rem;
+  height: 5rem;
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: transform 200ms; }
+
+.contenedorJugador {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  align-items: center; }
+
+/* acordeon sin abrir */
+.accordion-button {
+  background-color: #212121;
+  color: #ffffff; }
+
+/* acordeon abierto */
+.accordion-button:not(.collapsed) {
+  color: #ffffff;
+  background-color: #212121;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125); }
+
+/* Flechas del acordeon */
+.accordion-button::after {
+  background-image: url(../images/flecha.png); }
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url(../images/flecha.png);
+  transform: rotate(-180deg); }
+
+/* cuerpo del acordeon */
+.accordion-item {
+  background-color: rgba(250, 70, 89, 0.7);
+  border: 0px solid rgba(255, 255, 255, 0.125);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.125); }
+
+.contenedorDatosJugador {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  column-gap: 1rem; }
+
+.datosJugador {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem; }
+
+/* SECCIÓN NOSOTROS */
+.gridPadreNosotros {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, auto);
+  row-gap: 3rem;
+  justify-items: center; }
+  .gridPadreNosotros .informacion {
+    padding: 1rem;
+    background-color: rgba(46, 184, 114, 0.5);
+    margin: 1rem; }
+  .gridPadreNosotros .gridGaleria {
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    grid-template-rows: repeat(8, auto);
+    column-gap: 1rem;
+    row-gap: 1rem; }
+  .gridPadreNosotros form {
+    width: 100%;
+    padding: 1.6rem;
+    border-radius: 1rem;
+    background-color: #fa4659; }
+    .gridPadreNosotros form .label {
+      width: fit-content;
+      padding-right: 1.6rem;
+      font-weight: bold;
+      display: inline-block; }
+    .gridPadreNosotros form .input {
+      width: 18rem;
+      margin: 1rem 0.2rem;
+      display: inline-block; }
+    .gridPadreNosotros form .enviar {
+      width: 100%;
+      padding: 0.8rem 11.6rem;
+      margin-top: 3.2rem;
+      border: 0.1rem solid #ffffff;
+      border-radius: 0.5rem;
+      display: block;
+      color: #212121;
+      background-color: #ffffff; }
+      .gridPadreNosotros form .enviar:hover {
+        cursor: pointer;
+        background-color: #FEFFE4;
+        border-color: #FEFFE4; }
+    .gridPadreNosotros form .cursor:hover {
+      cursor: pointer; }
+    .gridPadreNosotros form textarea {
+      width: 100%;
+      height: 10rem;
+      border: 0.2rem solid #ffffff;
+      border-radius: 0.5rem;
+      background-color: #ffffff;
+      margin: 0.8rem 0rem;
+      resize: none;
+      display: block; }
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  color: black;
+  background-color: white;
+  border-radius: 50%; }
+
+.flechaCarousel {
+  font-size: 1.5rem; }
+
+/* VISTA TABLET */
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: 1.6rem; }
+  header {
+    justify-content: center;
+    font-size: 1.6rem; }
+    header .logo {
+      width: 11rem;
+      transition: width 0.5s; }
+      header .logo:hover {
+        width: 12rem; }
+  /* MENU TABLET */
+  .menu {
+    padding: 0.5rem 0rem; }
+    .menu a {
+      position: relative;
+      font-size: 1.8rem;
+      margin-right: 1.2rem;
+      padding: 0 6px; }
+      .menu a:after {
+        content: "";
+        position: absolute;
+        background-color: #ffffff;
+        height: 3px;
+        width: 0;
+        left: 0;
+        bottom: -4px;
+        transition: 0.3s; }
+  a:hover:after {
+    width: 100%; }
+  /* SECCIÓN INDEX TABLET */
+  .gridPadreIndex {
+    grid-template-columns: 3fr 2fr 2fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "reciente reciente recienteTexto" "posiciones proximoPartido proximoPartido" "posiciones maps maps";
+    grid-column-gap: 1rem;
+    font-size: 1.6rem;
+    justify-content: center;
+    margin: 3rem; }
+  .reciente {
+    grid-area: reciente; }
+  .recienteTexto {
+    margin-left: 1rem;
+    grid-area: recienteTexto;
+    align-self: center;
+    text-align: left; }
+  .posiciones {
+    grid-area: posiciones; }
+  .proximoPartido {
+    grid-area: proximoPartido;
+    margin-top: 5rem; }
+  .maps {
+    grid-area: maps; }
+  /* SECCIÓN FIXTURE TABLET */
+  .fixtureFecha {
+    column-gap: 5rem;
+    transition: transform 0.5s; }
+    .fixtureFecha:hover {
+      transform: scale(1.1); }
+  /* SECCIÓN GOLES TABLET */
+  .gridPadreGoles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: repeat(4, auto);
+    grid-template-areas: "goleadores goleadores" "maximasGoleadas penales" "dobletes hattricks" "poker poker";
+    padding: 2rem 1rem;
+    justify-content: space-evenly;
+    justify-items: center;
+    text-align: center;
+    row-gap: 2rem;
+    column-gap: 1rem; }
+    .gridPadreGoles .goleadores {
+      grid-area: goleadores; }
+    .gridPadreGoles .maximasGoleadas {
+      grid-area: maximasGoleadas; }
+    .gridPadreGoles .penales {
+      grid-area: penales; }
+    .gridPadreGoles .dobletes {
+      grid-area: dobletes; }
+    .gridPadreGoles .hattricks {
+      grid-area: hattricks; }
+    .gridPadreGoles .poker {
+      grid-area: poker; }
+  /* SECCIÓN JUGADORES TABLET */
+  .jugadorImagen1:hover {
+    transform: scale(2, 2);
+    cursor: pointer; }
+  .jugadorImagen2:hover {
+    transform: scale(2, 2);
+    cursor: pointer; }
+  .jugadorImagen3:hover {
+    transform: scale(2, 2);
+    cursor: pointer; }
+  .jugadorImagen4:hover {
+    transform: scale(2, 2);
+    cursor: pointer; }
+  .jugadorImagen5:hover {
+    transform: scale(2, 2);
+    cursor: pointer; }
+  .jugadorImagen6:hover {
+    transform: scale(2, 2);
+    cursor: pointer; }
+  .jugadorImagen7:hover {
+    transform: scale(2, 2);
+    cursor: pointer; }
+  .jugadorImagen8:hover {
+    transform: scale(2, 2);
+    cursor: pointer; }
+  .jugadorImagen9:hover {
+    transform: scale(2, 2);
+    cursor: pointer; }
+  .jugadorImagen10:hover {
+    transform: scale(2, 2);
+    cursor: pointer; }
+  .jugadorImagen11:hover {
+    transform: scale(2, 2);
+    cursor: pointer; }
+  .jugadorImagen12:hover {
+    transform: scale(2, 2);
+    cursor: pointer; }
+  .jugadorImagen13:hover {
+    transform: scale(2, 2);
+    cursor: pointer; }
+  .jugadorImagen14:hover {
+    transform: scale(2, 2);
+    cursor: pointer; }
+  .jugadorImagen15:hover {
+    transform: scale(2, 2);
+    cursor: pointer; }
+  .jugadorImagen16:hover {
+    transform: scale(2, 2);
+    cursor: pointer; }
+  .jugadorImagen17:hover {
+    transform: scale(2, 2);
+    cursor: pointer; }
+  .jugadorImagen18:hover {
+    transform: scale(2, 2);
+    cursor: pointer; }
+  .jugadorImagen19:hover {
+    transform: scale(2, 2);
+    cursor: pointer; }
+  .jugadorImagen20:hover {
+    transform: scale(2, 2);
+    cursor: pointer; }
+  .jugadorImagen21:hover {
+    transform: scale(2, 2);
+    cursor: pointer; }
+  .jugadorImagen22:hover {
+    transform: scale(2, 2);
+    cursor: pointer; }
+  .jugadorImagen23:hover {
+    transform: scale(2, 2);
+    cursor: pointer; }
+  .jugadorImagen24:hover {
+    transform: scale(2, 2);
+    cursor: pointer; }
+  .jugadorImagen25:hover {
+    transform: scale(2, 2);
+    cursor: pointer; }
+  /* SECCIÓN NOSOTROS TABLET */
+  .gridPadreNosotros {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "familia familia" "informacion informacion" "fotos fotos" "formulario formulario";
+    column-gap: 2rem;
+    row-gap: 3rem;
+    justify-items: center;
+    margin: 2rem; }
+    .gridPadreNosotros .familia {
+      grid-area: familia; }
+    .gridPadreNosotros .informacion {
+      grid-area: informacion; }
+    .gridPadreNosotros .fotos {
+      grid-area: fotos; }
+    .gridPadreNosotros .gridGaleria {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, auto);
+      column-gap: 1rem;
+      row-gap: 1rem; }
+      .gridPadreNosotros .gridGaleria .animacionGaleria {
+        transition: transform 0.5s; }
+        .gridPadreNosotros .gridGaleria .animacionGaleria:hover {
+          transform: scale(1.1);
+          cursor: pointer; }
+    .gridPadreNosotros .formulario {
+      grid-area: formulario; }
+  /* TIENDA TABLET */
+  .gridPadreTienda .gridGaleria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, auto);
+    column-gap: 1rem;
+    row-gap: 1rem; }
+    .gridPadreTienda .gridGaleria .imgProducto {
+      height: 20rem; }
+    .gridPadreTienda .gridGaleria .productoBoton {
+      font-size: 1.2rem; }
+  /* FOOTER TABLET */
+  .contenedorFooter .imgFooterCampa {
+    width: 9rem;
+    height: 9.3rem;
+    background-image: url(../images/campa.png); }
+    .contenedorFooter .imgFooterCampa:hover {
+      background-image: url(../images/campaNegro.png); }
+  .contenedorFooter .imgFooterKappa {
+    width: 10rem;
+    height: 5.5rem;
+    background-image: url(../images/kappa.png); }
+    .contenedorFooter .imgFooterKappa:hover {
+      background-image: url(../images/kappaNegro.png); }
+  .contenedorFooter .iconos {
+    font-size: 5rem; } }
+
+/* VISTA PC */
+@media only screen and (min-width: 1024px) {
+  /* HEADER PC */
+  header .titulo {
+    font-size: 4rem; }
+  header .logo {
+    width: 14rem; }
+    header .logo:hover {
+      width: 15rem; }
+  /* MENU NAV PC */
+  .menu {
+    padding: 1rem 0rem; }
+    .menu a {
+      margin-right: 2rem;
+      font-size: 2rem; }
+  /* SECCION INDEX PC */
+  .gridPadreIndex {
+    grid-template-columns: 5fr 1.5fr 2fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "reciente recienteTexto posiciones" "proximoPartido proximoPartido maps";
+    grid-row-gap: 5.5rem;
+    grid-column-gap: 1rem;
+    font-size: 1.6rem;
+    justify-content: space-evenly;
+    align-content: space-between;
+    margin: 3rem 11rem; }
+    .gridPadreIndex .proximoPartido {
+      margin-top: 0rem; }
+  /* SECCION FIXTURE */
+  .fixtureFecha {
+    max-width: 70vw; }
+  /* SECCIÓN GOLES PC */
+  .gridPadreGoles {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr 1fr;
+    grid-row: repeat(2, auto);
+    grid-template-areas: "goleadores maximasGoleadas penales" "dobletes hattricks poker";
+    padding: 2rem 1rem;
+    justify-content: space-evenly;
+    column-gap: 2rem;
+    row-gap: 2rem; }
+    .gridPadreGoles .goleadores {
+      grid-area: goleadores; }
+    .gridPadreGoles .primerGol {
+      grid-area: primerGol; }
+    .gridPadreGoles .maximasGoleadas {
+      grid-area: maximasGoleadas; }
+    .gridPadreGoles .penales {
+      grid-area: penales; }
+    .gridPadreGoles .dobletes {
+      grid-area: dobletes; }
+    .gridPadreGoles .hattricks {
+      grid-area: hattricks; }
+    .gridPadreGoles .poker {
+      grid-area: poker; }
+  /* SECCIÓN NOSOTROS PC */
+  .gridPadreNosotros .gridGaleria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    column-gap: 1rem;
+    row-gap: 1rem; }
+  /* SECCIÓN TIENDA PC */
+  .gridPadreTienda .gridGaleria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+    column-gap: 1rem;
+    row-gap: 1rem;
+    padding: 0rem 6.5rem; }
+    .gridPadreTienda .gridGaleria .imgProducto {
+      height: 30rem; }
+    .gridPadreTienda .gridGaleria .productoBoton {
+      font-size: 1.7rem; } }
+
+.gridPadreTienda {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, auto);
+  row-gap: 3rem;
+  justify-items: center;
+  padding: 0rem 1rem;
+  margin: 2rem 2rem; }
+  .gridPadreTienda .gridGaleria {
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    grid-template-rows: repeat(8, auto);
+    column-gap: 3rem;
+    row-gap: 3rem; }
+
+.producto {
+  display: flex;
+  flex-direction: column;
+  border-radius: 2rem;
+  box-shadow: 0px 0px 2px 2px rgba(250, 70, 89, 0.7); }
+
+.productoImagen {
+  display: flex;
+  justify-content: center; }
+
+.productoDatos {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+.productoBoton {
+  margin: 1rem;
+  padding: 0.8rem;
+  border-color: #ffffff;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem; }
+  .productoBoton:hover {
+    color: #ffffff;
+    background-color: #2eb872;
+    transition: 300ms linear; }
+
+.imgProducto {
+  padding-top: 1rem;
+  width: 96%;
+  height: 18rem;
+  border-radius: 2rem; }
+
+.productoTitulo {
+  padding: 1rem;
+  text-align: center; }
+
+.productoPrecio {
+  padding: 1rem; }
+
+.carrito {
+  align-items: center;
+  border: #2eb872 solid 0.2rem;
+  margin-left: 20rem;
+  margin-right: 20rem; }
+  .carrito .imgCarrito {
+    max-width: 12rem;
+    border-radius: 2rem; }
+  .carrito .cambiarCantidad {
+    max-width: 4rem; }
+  .carrito #precioEuros {
+    margin: 1rem;
+    padding: 0.8rem;
+    border-color: #ffffff;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem; }
+    .carrito #precioEuros:hover {
+      color: #fa4659;
+      transition: 300ms linear; }
+  .carrito .accionesCarrito {
+    display: flex; }
+    .carrito .accionesCarrito #botonComprar {
+      margin: 1rem;
+      padding: 0.8rem;
+      max-width: 20rem;
+      border-color: #2eb872;
+      background-color: #2eb872;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 1rem; }
+      .carrito .accionesCarrito #botonComprar:hover {
+        color: #ffffff;
+        border-color: #ffffff;
+        background-color: #2eb872;
+        transition: 300ms linear; }
+    .carrito .accionesCarrito #botonVaciarCarrito {
+      margin: 1rem;
+      padding: 0.8rem;
+      max-width: 20rem;
+      border-color: #fa4659;
+      background-color: #fa4659;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 1rem; }
+      .carrito .accionesCarrito #botonVaciarCarrito:hover {
+        color: #ffffff;
+        border-color: #ffffff;
+        background-color: #fa4659;
+        transition: 300ms linear; }
+  .carrito .despuesDeCompra {
+    display: none; }
+
+/* KEYFRAMES */
+@keyframes zoom {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(0.97); }
+  100% {
+    transform: scale(1); } }

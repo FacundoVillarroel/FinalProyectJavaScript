@@ -1,0 +1,133 @@
+.gridPadreTienda {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    row-gap: 3rem;
+    justify-items: center;
+    padding: 0rem 1rem;
+    margin: 2rem 2rem;
+    .gridGaleria {
+        display: grid;
+        grid-template-columns: repeat(1fr);
+        grid-template-rows: repeat(8, auto);
+        column-gap: 3rem;
+        row-gap: 3rem;
+    }
+}
+
+.producto{
+    display: flex;
+    flex-direction: column;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 2px 2px rgba(250, 70, 89, 0.7);
+}
+.productoImagen{
+    display: flex;
+    justify-content: center;
+}
+.productoDatos{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.productoBoton{
+    margin: 1rem;
+    padding: 0.8rem;
+    border-color:$colorBlanco;
+    background-color: $colorBlanco;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+    &:hover{
+        color: $colorBlanco;  
+        background-color: $colorVerde;
+        transition: 300ms linear;
+    }
+}
+.imgProducto{
+    padding-top: 1rem;
+    width: 96%;
+    height: 18rem;
+    border-radius: 2rem;
+}
+.productoTitulo{
+    padding: 1rem;
+    text-align: center;
+}
+.productoPrecio{
+    padding: 1rem;
+}
+.carrito{
+    align-items: center;
+    border: $colorVerde solid 0.2rem;
+    margin-left: 20rem;
+    margin-right: 20rem;
+    .imgCarrito{
+        max-width: 12rem;
+        border-radius: 2rem;
+    }
+    .cambiarCantidad{
+        max-width: 4rem;
+    }
+    #precioEuros{
+        margin: 1rem;
+        padding: 0.8rem;
+        border-color:$colorBlanco;
+        background-color: $colorBlanco;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        font-weight: 700;
+        font-size: 1rem;
+        &:hover{
+            color: $colorRojo;
+            transition: 300ms linear;
+        }
+    }
+    .accionesCarrito{
+        display: flex;
+        
+        #botonComprar{
+            margin: 1rem;
+            padding: 0.8rem;
+            max-width: 20rem;
+            border-color:$colorVerde;
+            background-color: $colorVerde;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1rem;
+            &:hover{
+                color: $colorBlanco;  
+                border-color: $colorBlanco;
+                background-color: $colorVerde;
+                transition: 300ms linear;
+            }
+        }
+        #botonVaciarCarrito{
+            margin: 1rem;
+            padding: 0.8rem;
+            max-width: 20rem;
+            border-color:$colorRojo;
+            background-color: $colorRojo;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 1rem;
+            &:hover{
+                color: $colorBlanco; 
+                border-color: $colorBlanco; 
+                background-color: $colorRojo;
+                transition: 300ms linear;
+            }
+        }
+    }
+    .despuesDeCompra{
+        display: none;
+    }
+}
+
+
+

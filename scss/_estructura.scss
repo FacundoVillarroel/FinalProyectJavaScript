@@ -1,0 +1,46 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  width: auto;
+  background: $colorNegro;
+  color: $colorBlanco;
+  font-size: 1.2rem;
+}
+.titular {
+  @include titulosPropiedades(2rem,600,1rem,center)  
+}
+.titularSecundario{
+  @include titulosPropiedades(2rem,400,1rem,center)
+}
+table {
+  &.fondo {
+    background-color: $colorVerde;
+    border: solid $colorNegro 0.1rem;
+  }
+  
+  th {
+    @include celdaTabla(0.1rem solid $colorNegro,0.5rem,center)
+  }
+  td {
+    @include celdaTabla(0.1rem solid $colorNegro,0.5rem,start);
+  }
+}
+a{
+  text-decoration: none;
+  color: $colorBlanco;
+}
+
+/* clase para imágenes */
+.bordeRedondeado {
+  width: 100%;
+  border-radius: 10%;
+}

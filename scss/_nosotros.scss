@@ -1,0 +1,82 @@
+/* SECCIÓN NOSOTROS */
+
+.gridPadreNosotros {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, auto);
+  row-gap: 3rem;
+  justify-items: center;
+  .informacion {
+    padding: 1rem;
+    background-color: rgba($colorVerde, 0.5);
+    margin: 1rem;
+  }
+  .gridGaleria {
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    grid-template-rows: repeat(8, auto);
+    column-gap: 1rem;
+    row-gap: 1rem;
+  }  
+  form {
+    width: 100%;
+    padding: 1.6rem;
+    border-radius: 1rem;
+    background-color: $colorRojo;
+    .label {
+      width: fit-content;
+      padding-right: 1.6rem;
+      font-weight: bold;
+      display: inline-block;
+    } 
+    .input {
+      width: 18rem;
+      margin: 1rem 0.2rem;
+      display: inline-block;
+    }
+    .enviar {
+      width: 100%;
+      padding: 0.8rem 11.6rem;
+      margin-top: 3.2rem;
+      border: 0.1rem solid $colorBlanco;
+      border-radius: 0.5rem;
+      display: block;
+      color: $colorNegro;
+      background-color: $colorBlanco;
+    
+      &:hover {
+        cursor: pointer;
+        background-color:#FEFFE4;
+        border-color: #FEFFE4;
+
+      }
+    }
+    .cursor:hover {
+      cursor: pointer;
+    }
+    
+    textarea {
+      width: 100%;
+      height: 10rem;
+      border: 0.2rem solid $colorBlanco;
+      border-radius: 0.5rem;
+      background-color: $colorBlanco;
+      margin: 0.8rem 0rem;
+      resize: none;
+      display: block;
+    }
+  }
+}
+
+.carousel-control-prev-icon{
+  color: black;
+  background-color: rgba(255, 255, 255,1);
+  border-radius: 50%;
+}
+
+.carousel-control-next-icon{
+  @extend .carousel-control-prev-icon;
+}
+.flechaCarousel{
+  font-size: 1.5rem;
+}

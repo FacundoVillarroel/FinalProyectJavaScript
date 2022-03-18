@@ -1,0 +1,31 @@
+@import "variables";
+@import "mixins";
+@import "estructura";
+@import "header";
+@import "menuNav";
+@import "footer";
+@import "index";
+@import "fixture";
+@import "goles";
+@import "jugadores";
+@import "nosotros";
+@import "vistaTablet";
+@import "vistaPc";
+@import "tienda";
+
+
+/* KEYFRAMES */
+
+@keyframes zoom {
+0% {
+    transform: scale(1);
+}
+
+50% {
+    transform: scale(0.97);
+}
+
+100% {
+    transform: scale(1);
+}
+}

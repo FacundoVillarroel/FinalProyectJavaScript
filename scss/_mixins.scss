@@ -1,0 +1,12 @@
+@mixin celdaTabla($border,$padding,$text-align)
+{
+    border: $border;
+    padding: $padding;
+    text-align: $text-align;
+}
+@mixin titulosPropiedades($padding-top,$font-weight,$padding-bottom,$text-align){
+    padding-top: $padding-top;
+    font-weight: $font-weight;
+    padding-bottom: $padding-bottom;
+    text-align: $text-align;
+}

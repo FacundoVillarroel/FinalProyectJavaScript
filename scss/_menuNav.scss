@@ -1,0 +1,29 @@
+/* MENU NAV */
+
+.menu {
+  position: sticky;
+  padding: 0.5rem 0rem;
+  top: 0;
+  display: flex;
+  background-color: $colorVerde;
+  font-size: 1.6rem;
+  z-index: 10;
+  text-transform: capitalize;
+  font-weight: 600;
+  .paginaActiva {
+      color: $colorBlanco;
+    }
+  a {
+    color: $colorNegro;
+    text-decoration: none;
+    padding: 0.3rem;
+  }
+}
+.navbar-nav{
+  align-items: flex-end;
+}
+
+
+  
+  
+  
